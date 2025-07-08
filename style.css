@@ -1,3 +1,4 @@
+
 /* universal code use to remove all padding and margin because we are going to design by us */
 *{padding: 0;margin: 0;}
 
@@ -31,10 +32,9 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
 /* insted of giving class for p I gave container name where p inside and mentioned p with space so it consider disign goes to p */
 .categories p{background-color: #a335f0; color: white;padding: 10px;border-radius: 20px;}
 
-
-
 /* sale img */
 .saleimg img{width: 100%;height: 400px;}
+.saleimg{padding-left: 50px;padding-right: 50px;padding-top: 5px;}
 
 
 /* recommend */ 
@@ -77,3 +77,5 @@ flex basis- by giving value here we can decide how much % of space that content 
 
 /* i want p alone big so i design this paeticular class */
 .big{font-size:xx-large;}
+
+
