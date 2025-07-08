@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udemy-Clone</title>
+    <link rel="stylesheet" href="style.css ">
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <!-- font awesom cdn link for icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- navigation Bar -->
+    <div class="navbar">
+
+        <div class="navbar__left">
+            <h1 class="navbar__left__s1">Udemy</h1>
+
+        </div>
+
+        <div class="navbar__center">
+            <!-- search icon link from font awesome -->
+            <i class="fa-solid fa-magnifying-glass" style="color: #0f0f10;"></i>
+            <!-- input box for search -->
+            <input placeholder="search for anything">
+
+        </div>
+
+        <div class="navbar__right">
+            <!-- icon add -->
+            <p>courses</p>
+            <p>mylearning</p>
+            <!-- cart link -->
+            <i class="fa-solid fa-cart-shopping" style="color: #000000;"></i>
+            <!-- notification link -->
+            <i class="fa-solid fa-bell" style="color: #000000;"></i>
+            <!-- profile -->
+            <i class="fa-solid fa-user" style="color: #030303;"></i>
+
+        </div>
+
+    </div>
+
+    <!-- categories -->
+
+    <div class="categories">
+        <!-- element same line vara container ah flex aga change -->
+        <p>Development</p>
+        <p>Business</p>
+        <p>IT&Software</p>
+        <p>Personal Development</p>
+        <p>Design</p>
+        <p>Marketing</p>
+
+    </div>
+
+    <!-- sale img -->
+    <div class="saleimg">
+        <img src="./img/sale img.jpg" alt="sale img">
+    </div>
+
+    <!-- recommend card -->
+    <div class="recommend">
+        <h1>Recommended For You</h1>
+        <p>Pick the Best</p>
+
+        <div class="recommend__container">
+            <div class="coursecard">
+                <img src="./img/DA.jpg" alt="Data analytics">
+                <h2>Data Analytics Course</h2>
+                <p>Mentor: Meega</p>
+                <p>Ratings 4.5 ⭐ ⭐ ⭐ ⭐</p>
+                <p>499 <del>1499</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/fs.jpg" alt="Fullstack">
+                <h2>Fullstack Course</h2>
+                <p>Mentor: Agnol</p>
+                <p>Ratings 5 ⭐ ⭐ ⭐ ⭐</p>
+                <p>799 <del>2000</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/cs.jpg" alt="CyberSecurity">
+                <h2>CyberSecurity</h2>
+                <p>Mentor: Praveen</p>
+                <p>Ratings 4.8 ⭐ ⭐ ⭐ ⭐</p>
+                <p>999 <del>3000</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/uiux.jpg" alt="ui/ux">
+                <h2>UI/UX Course</h2>
+                <p>Mentor: Sam</p>
+                <p>Ratings 4.7 ⭐ ⭐ ⭐ ⭐</p>
+                <p>499 <del>1500</del></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Topic Recommend -->
+    <div class="topic">
+        <h1 class="topic__title">Topics Recomend for you</h1>
+        <div class="topic__container">
+            <p>Webapplication</p>
+            <p>HTML</p>
+            <p>CSS</p>
+            <p>Java script</p>
+            <p>React</p>
+            <p>Azure</p>
+            <p>Mongo DB</p>
+            <p>Docker</p>
+            <p>Github</p>
+        </div>
+    </div>
+
+    <!-- Most Popular -->
+    <div class="popular">
+        <h1>Most Popular</h1>
+        <p>Pick the Best</p>
+
+        <div class="popular__container">
+            <div class="card">
+                <img src="./img/ai.jpg" alt="Artificial Intelligence">
+                <h2>Artificial Intelligence</h2>
+                <p>Mentor: Meega</p>
+                <p>Ratings 4.5 ⭐ ⭐ ⭐ ⭐</p>
+                <p>3999 <del>4999</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/bc.jpg" alt="Block Chain">
+                <h2>Block Chain</h2>
+                <p>Mentor: Agnol</p>
+                <p>Ratings 5 ⭐ ⭐ ⭐ ⭐</p>
+                <p>2000 <del>3000</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/cc.jpg" alt="Cloud Computing">
+                <h2>Cloud Computing</h2>
+                <p>Mentor: Praveen</p>
+                <p>Ratings 4.8 ⭐ ⭐ ⭐ ⭐</p>
+                <p>2500 <del>3000</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/dm.jpg" alt="Digital Marketing">
+                <h2>Digital Marketing</h2>
+                <p>Mentor: Sam</p>
+                <p>Ratings 4.7 ⭐ ⭐ ⭐ ⭐</p>
+                <p>1500 <del>2000</del></p>
+            </div>
+
+            <div class="card">
+                <img src="./img/DA.jpg" alt="Data analytics">
+                <h2>Data Analytics Course</h2>
+                <p>Mentor: Meega</p>
+                <p>Ratings 4.5 ⭐ ⭐ ⭐ ⭐</p>
+                <p>2000 <del>2500</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/dl.jpg" alt="DeepLearning">
+                <h2>DeepLearning</h2>
+                <p>Mentor: Agnol</p>
+                <p>Ratings 5 ⭐ ⭐ ⭐ ⭐</p>
+                <p>9999 <del>15000</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/ml.jpg" alt="MachineLearning">
+                <h2>MachineLearning</h2>
+                <p>Mentor: Praveen</p>
+                <p>Ratings 4.8 ⭐ ⭐ ⭐ ⭐</p>
+                <p>9999 <del>15000</del></p>
+            </div>
+
+            <div class="coursecard">
+                <img src="./img/fs.jpg" alt="Graphic Design">
+                <h2>Graphic Design</h2>
+                <p>Mentor: Sam</p>
+                <p>Ratings 4.7 ⭐ ⭐ ⭐ ⭐</p>
+                <p>8000 <del>10000</del></p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <!--Footer -->
+    <div class="footer">
+        <div class="footer__1">
+            <div class="footer__1__section1">
+                <p>Udemy Business</p>
+                <p>Teach on Udemey</p>
+                <p>Get the app</p>
+                <p>About Us</p>
+                <p>Contact Us</p>
+
+            </div>
+
+            <div class="footer__1__section2">
+                <p>Career</p>
+                <p>Blog</p>
+                <p>Health&Support</p>
+                <p>Affiliate</p>
+                <p>Investors</p>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer__2">
+            <p class="big">Udemy </p>
+            <p>&copy; Udemey, Inc</p>
+
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
