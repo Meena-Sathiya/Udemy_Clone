@@ -6,9 +6,7 @@ Visit the live project here:
 🔗 [https://meena-sathiya.github.io/Udemy_Clone/](https://meena-sathiya.github.io/Udemy_Clone/)
 
 
-## 🔗 My Previous Projects
-
-- [Udemy Clone](https://meena-sathiya.github.io/Udemy_Clone/)
+## 🔗 My Previous Projects : https://meena-sathiya.github.io/Udemy_Clone/
 
   
 
