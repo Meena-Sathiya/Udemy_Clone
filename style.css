@@ -1,81 +1,240 @@
-
 /* universal code use to remove all padding and margin because we are going to design by us */
-*{padding: 0;margin: 0;}
+* {
+    padding: 0;
+    margin: 0;
+}
 
 /* font weight always number */
-body{font-family: "Playfair Display", serif;font-weight: 600}
+body {
+    font-family: "Playfair Display", serif;
+    font-weight: 600
+}
 
 /* navbar style */
 
 /* very close to edge so first padding,nav bar I need all in one line so change this container as flex,why justity space-between coz 3 headings will be split equal,
 why borderbottom- to show seprate from body, I want everything center already I gave justify content for main axis-row so now to allign cross axis I gave align item */
-.navbar{padding: 10px;display: flex;justify-content: space-between;border-bottom:solid black 1px ;align-items: center;}
-.navbar__left__s1{color: #a335f0;}
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid black 1px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    /*navbar  z-2,saleimg offer z-1 thats only navbar on top*/
+}
+
+.navbar__left__s1 {
+    color: #a335f0;
+}
 
 /* centerdesign, create one box and design then remove unneccssary, remove search link border coz i gave box,i gave width equally so i got icon and search
 bar in same line sometime it will be 2line that time we have to give diplay:flex, we will get 2 in same line when ve give,after after both are in same line if v need gap between these v have to give gap:1px */
-.navbar__center{padding: 10px;border: 1px solid black;border-radius: 30px;width: 60%;align-items: center;}
+.navbar__center {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 30px;
+    width: 60%;
+    align-items: center;
+
+}
 
 /* class not create for input already its in inside of navbar__center so just leave space then type the elemnt wt we need to design automatically it will style */
-.navbar__center input{border: none;font-size: 20px;}
+.navbar__center input {
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+}
+
 /* when touch search iocn input border will get focus automatically to remove that,focus one of pseudo class like hover,hover focus should be give out of{}these backets : only use */
-.navbar__center input:focus{outline: none}
+.navbar__center input:focus {
+    outline: none
+}
 
 /* navbar right side element are in next next line so I agve flex */
-.navbar__right{display: flex;gap: 20px;font-size: x-large;align-items: center;}
+.navbar__right {
+    display: flex;
+    gap: 20px;
+    font-size: x-large;
+    align-items: center;
+}
+
+/* mylearn and popup */
+.mylearn {
+    position: relative;
+    cursor: pointer;
+}
+
+.mylearn__popup {
+    position: absolute;
+    border: solid black 1px;
+    border-radius: 8px;
+    background-color: white;
+    padding: 10px;
+    top: 50px;
+    /*we can give margin top also */
+    width: 240px;
+    display: none;
+    /* by giving this popup box disapper*/
+}
+
+.mylearn:hover .mylearn__popup {
+    display: block;
+}
+
+/* wt it means when v cursor top of my learn popup display have to become block thn only we can
+ able to see wts in side*/
+
+/* Saleimg  offer */
+.saleimg {
+    position: relative;
+    z-index: 1;
+}
+
+.saleimg__offer {
+    background-color: #a335f0;
+    color: white;
+    width: fit-content;
+    padding: 25px;
+    border: solid white 2px;
+    border-radius: 20px;
+    position: absolute;
+    bottom: 40px;
+    margin-left: 20px;
+}
 
 /* Categores STYLE */
 
 /* I need all elements in straight line so I changed box into flex, flex default is row for main axis allign I gave justifycontent spacearound now all elements fillup the space ,bg clr cant set here if i set here it apply for container not p*/
-.categories{display: flex;padding:10px;margin: 5px; border-bottom: black solid 1px;justify-content: space-around;}
+.categories {
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    border-bottom: black solid 1px;
+    justify-content: space-around;
+}
 
 /* insted of giving class for p I gave container name where p inside and mentioned p with space so it consider disign goes to p */
-.categories p{background-color: #a335f0; color: white;padding: 10px;border-radius: 20px;}
+.categories p {
+    background-color: #a335f0;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+}
 
 /* sale img */
-.saleimg img{width: 100%;height: 400px;}
-.saleimg{padding-left: 50px;padding-right: 50px;padding-top: 5px;}
+.saleimg img {
+    width: 100%;
+    height: 400px;
+}
+
+.saleimg {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+}
 
 
-/* recommend */ 
+/* recommend */
 
 /* This is main div bt i didn't make this as container/ reason if i change this as container all heading para will be show next to next incase I give flex in this container to avoid confusion i avoid container here*/
-.recommend{padding: 10px;}
+.recommend {
+    padding: 10px;
+}
 
 /* flex warp specially for this container y ? coz when screen get shrink content wont diapear it will allign and shown according to screen  bt 
  widhth height should be mention in px ,if we mention as % it wont wrk..  I gave widhth 20% for coursecard first then change that into px.. */
-.recommend__container{display: flex; flex-wrap: wrap; justify-content: space-around;}
+.recommend__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
-.coursecard{width: 300px; margin-top: 10px;}
+.coursecard {
+    width: 300px;
+    margin-top: 10px;
+}
 
-.coursecard img{width: 100%;height: 50%;}
+.coursecard img {
+    width: 100%;
+    height: 50%;
+}
 
 /* topic */
 /* flex wrap- to avoid content shrink when screen small and incase if there is no space in screen means according to screen size content will minimize and goes tonext line,,,
 flex grow- if we give any value according to that value it display the content.. ifscreen is small content get shrink and display  only dont goes to next line ,,
 flex basis- by giving value here we can decide how much % of space that content should ocupy the screen  ..kind of width for using flex */
-.topic{padding: 10px;}
-.topic__container{ display: flex; gap: 10px;margin-top: 10px; flex-wrap: wrap;}
-.topic__container p{border: solid grey 2px;padding: 10px;flex-grow: 1;flex-basis: 25%;}
+.topic {
+    padding: 10px;
+}
+
+.topic__container {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.topic__container p {
+    border: solid grey 2px;
+    padding: 10px;
+    flex-grow: 1;
+    flex-basis: 25%;
+}
 
 /* popular */
-.popular{padding: 10px;}
-.popular__container{display: flex;flex-wrap: wrap;justify-content: space-around;gap: 10px;}
-.card{width: 300px; margin-top: 10px;}
-.card img{width: 100%;height: 50%;}
+.popular {
+    padding: 10px;
+}
+
+.popular__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.card {
+    width: 300px;
+    margin-top: 10px;
+}
+
+.card img {
+    width: 100%;
+    height: 50%;
+}
 
 /* Footer */
 
 /*  I didn't give class for p directly mentioned here */
-.footer p{margin: 10px;}
+.footer p {
+    margin: 10px;
+}
 
 /* i gave 2section under footer 1 insted of giving flex to section 1 to get section 2 bext of section 1 made footer fone as flex so all content will be next to next */
-.footer__1{padding: 10px; display: flex; gap: 100px;background-color: black;color: white;}
+.footer__1 {
+    padding: 10px;
+    display: flex;
+    gap: 100px;
+    background-color: black;
+    color: white;
+}
 
 /* why alighn item-becoz for main axis already i gave justify content now i need justied content just center from top of the colum to middle of the column so cross axis control- align items */
-.footer__2{padding: 10px; ; background-color:black;color: white;display: flex;justify-content: space-between;align-items: center;}
+.footer__2 {
+    padding: 10px;
+    ;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* i want p alone big so i design this paeticular class */
-.big{font-size:xx-large;}
-
-
+.big {
+    font-size: xx-large;
+}
