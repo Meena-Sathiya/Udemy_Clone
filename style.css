@@ -83,10 +83,10 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
 
 .mylearn:hover .mylearn__popup {
     display: block;
-}
+} /* wt it means when v cursor top of my learn popup display have to become block thn only we can
+able to see wts in side*/
 
-/* wt it means when v cursor top of my learn popup display have to become block thn only we can
- able to see wts in side*/
+
 
 /* Saleimg  offer */
 .saleimg {
