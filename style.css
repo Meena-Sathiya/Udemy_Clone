@@ -49,7 +49,7 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
     background-color: transparent;
 }
 
-/* when touch search iocn input border will get focus automatically to remove that,focus one of pseudo class like hover,hover focus should be give out of{}these backets : only use */
+/* when touch search icon input border will get focus automatically to remove that,focus one of pseudo class like hover,hover focus should be give out of{}these backets : only use */
 .navbar__center input:focus {
     outline: none
 }
@@ -78,19 +78,63 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
     /*we can give margin top also */
     width: 240px;
     display: none;
-    /* by giving this popup box disapper*/
+    /* by giving this popup box will disapper*/
 }
 
 .mylearn:hover .mylearn__popup {
     display: block;
-} /* wt it means when v cursor top of my learn popup display have to become block thn only we can
-able to see wts in side*/
+}
 
+/* wt it means when cursor top of mylearn popupbox's  display have to become block thn only we can able to see wts in side*/
+
+/* Categores STYLE */
+
+/* I need all elements in straight line so I changed box into flex, flex default is row for main axis allign I gave justifycontent spacearound now all elements fillup the space ,bg clr cant set here if i set here it apply for container not p*/
+.categories {
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    border-bottom: black solid 1px;
+    justify-content: space-around;
+
+}
+
+
+/* insted of giving class for p I gave container name where p inside and mentioned p with space so it consider disign goes to p */
+.categories p {
+    background-color: #a335f0;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid
+        /*previously I didnt give border but border radius works how? it shape the background and text color bt we cant able to see border
+    BUt now I mentioned because when I hover i gave border will be solid if i didnt mention border here during hover border add and animation happen 
+    so ws feel shaking to avoid that we mention border both place so during hover It wont add any border extra just maintain the border whn hover*/
+}
+
+.categories p:hover {
+    background-color: white;
+    color: #a335f0;
+    transition-duration: 1s;
+    border-style: solid;
+    cursor: pointer;
+}
+
+
+/* sale img */
+.saleimg img {
+    width: 100%;
+    height: 400px;
+}
 
 
 /* Saleimg  offer */
 .saleimg {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
     position: relative;
+    /*if this box is relative then only we can contrl offer box inside of this*/
     z-index: 1;
 }
 
@@ -102,41 +146,30 @@ able to see wts in side*/
     border: solid white 2px;
     border-radius: 20px;
     position: absolute;
+    /*if this box is absolutue then only it can able to move within relative*/
     bottom: 40px;
     margin-left: 20px;
+    animation-name: zoom;
+    opacity: 0;
+    /*why 0 means- when i open website the box already dispaly I want animation after I opend so hide this*/
+    animation-fill-mode: forwards;
+    /*this is use to freeze the animation after it happend eg : after box zoom in it stay zoom in */
+    animation-duration: 2s;
+    /*transition use for hover,so here animation duration have to give*/
 }
 
-/* Categores STYLE */
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
 
-/* I need all elements in straight line so I changed box into flex, flex default is row for main axis allign I gave justifycontent spacearound now all elements fillup the space ,bg clr cant set here if i set here it apply for container not p*/
-.categories {
-    display: flex;
-    padding: 10px;
-    margin: 5px;
-    border-bottom: black solid 1px;
-    justify-content: space-around;
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
 }
-
-/* insted of giving class for p I gave container name where p inside and mentioned p with space so it consider disign goes to p */
-.categories p {
-    background-color: #a335f0;
-    color: white;
-    padding: 10px;
-    border-radius: 20px;
-}
-
-/* sale img */
-.saleimg img {
-    width: 100%;
-    height: 400px;
-}
-
-.saleimg {
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 5px;
-}
-
 
 /* recommend */
 
@@ -145,8 +178,8 @@ able to see wts in side*/
     padding: 10px;
 }
 
-/* flex warp specially for this container y ? coz when screen get shrink content wont diapear it will allign and shown according to screen  bt 
- widhth height should be mention in px ,if we mention as % it wont wrk..  I gave widhth 20% for coursecard first then change that into px.. */
+/* flex warp specially for this container y ? coz when screen get shrink content wont diapear it will allign and shown according to screen bt 
+ width height should be mention in px ,if we mention as % it wont wrk..  I gave width 20% for coursecard first then change that into px.. */
 .recommend__container {
     display: flex;
     flex-wrap: wrap;
@@ -214,7 +247,7 @@ flex basis- by giving value here we can decide how much % of space that content 
     margin: 10px;
 }
 
-/* i gave 2section under footer 1 insted of giving flex to section 1 to get section 2 bext of section 1 made footer fone as flex so all content will be next to next */
+/* I gave 2section under footer 1 insted of giving flex to section 1 to get section 2 bext of section 1 made footer fone as flex so all content will be next to next */
 .footer__1 {
     padding: 10px;
     display: flex;
@@ -223,7 +256,7 @@ flex basis- by giving value here we can decide how much % of space that content 
     color: white;
 }
 
-/* why alighn item-becoz for main axis already i gave justify content now i need justied content just center from top of the colum to middle of the column so cross axis control- align items */
+/* why align item-becoz for main axis already i gave justify content now i need justied content just center from top of the colum to middle of the column so cross axis control- align items */
 .footer__2 {
     padding: 10px;
     ;
@@ -234,7 +267,7 @@ flex basis- by giving value here we can decide how much % of space that content 
     align-items: center;
 }
 
-/* i want p alone big so i design this paeticular class */
+/* I want p alone big so I design this paeticular class */
 .big {
     font-size: xx-large;
 }
