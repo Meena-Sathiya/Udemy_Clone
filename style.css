@@ -16,6 +16,7 @@ body {
 why borderbottom- to show seprate from body, I want everything center already I gave justify content for main axis-row so now to allign cross axis I gave align item */
 .navbar {
     padding: 10px;
+    margin-left: 2px;
     display: flex;
     justify-content: space-between;
     border-bottom: solid black 1px;
@@ -45,7 +46,7 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
 /* class not create for input already its in inside of navbar__center so just leave space then type the elemnt wt we need to design automatically it will style */
 .navbar__center input {
     border: none;
-    font-size: 20px;
+    font-size: 16px;
     background-color: transparent;
 }
 
@@ -57,10 +58,11 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
 /* navbar right side element are in next next line so I agve flex */
 .navbar__right {
     display: flex;
-    gap: 20px;
-    font-size: x-large;
+    gap: 30px;
+    font-size: 18px;
     align-items: center;
 }
+.homeicon{display: none;}
 
 /* mylearn and popup */
 .mylearn {
@@ -76,20 +78,22 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
     padding: 10px;
     top: 50px;
     /*we can give margin top also */
-    width: 240px;
+    width: 200px;
     display: none;
     /* by giving this popup box will disapper*/
 }
-
+/* when hover that time only i want popupbox to display so i changeed display into block (if i gave inline,inline block nothing happen becox 
+alreadyi fix the widhth so i will get o/p in that box i dint give width now if i give inline or inline block op will be depends content size only */
 .mylearn:hover .mylearn__popup {
-    display: block;
+     display: block; 
 }
 
 /* wt it means when cursor top of mylearn popupbox's  display have to become block thn only we can able to see wts in side*/
 
 /* Categores STYLE */
 
-/* I need all elements in straight line so I changed box into flex, flex default is row for main axis allign I gave justifycontent spacearound now all elements fillup the space ,bg clr cant set here if i set here it apply for container not p*/
+/* I need all elements in straight line so I changed box into flex, flex default is row for main axis allign I gave justifycontent spacearound 
+now all elements fillup the space ,bg clr cant set here if i set here it apply for container not p*/
 .categories {
     display: flex;
     padding: 10px;
@@ -142,7 +146,7 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
     background-color: #a335f0;
     color: white;
     width: fit-content;
-    padding: 25px;
+    padding: 10px;
     border: solid white 2px;
     border-radius: 20px;
     position: absolute;
@@ -184,21 +188,25 @@ bar in same line sometime it will be 2line that time we have to give diplay:flex
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    gap: 10px;
 }
 
 .coursecard {
-    width: 300px;
+    flex-basis: 20%;
+    /*I deleted widhth and use flex basis then only i can able to give width in % why i give 20% i can give 25 coz i have 4 img bt i gave gap 10px so if i gave 25 image goes to next line*/
+    flex-grow: 1;
+    /*this is use to fill the space*/
     margin-top: 10px;
 }
 
 .coursecard img {
-    width: 100%;
+    width: 100%; /*here I mention widhth and height % for image */
     height: 50%;
 }
 
 /* topic */
-/* flex wrap- to avoid content shrink when screen small and incase if there is no space in screen means according to screen size content will minimize and goes tonext line,,,
-flex grow- if we give any value according to that value it display the content.. ifscreen is small content get shrink and display  only dont goes to next line ,,
+/* flex wrap- to avoid content shrink when screen small and incase if there is no space in screen means according to screen size content will minimize and goes to next line,,,
+flex grow- if we give any value according to that value it display the content.. if screen is small content get shrink and show the content only dont goes to next line ,,
 flex basis- by giving value here we can decide how much % of space that content should ocupy the screen  ..kind of width for using flex */
 .topic {
     padding: 10px;
@@ -216,6 +224,7 @@ flex basis- by giving value here we can decide how much % of space that content 
     padding: 10px;
     flex-grow: 1;
     flex-basis: 25%;
+    /*its a kind of widhth.. we give this as % thats only its size constant in all screen*/
 }
 
 /* popular */
@@ -231,7 +240,8 @@ flex basis- by giving value here we can decide how much % of space that content 
 }
 
 .card {
-    width: 300px;
+ flex-basis: 20%;
+ flex-grow: 1;
     margin-top: 10px;
 }
 
@@ -271,3 +281,66 @@ flex basis- by giving value here we can decide how much % of space that content 
 .big {
     font-size: xx-large;
 }
+
+/* MEDIA QUERIE */
+/* desktop */
+/* when screen size untill 800px font would be 10px */
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    head {
+        font-size: 12px;
+    }
+}
+
+/* mobile */
+/* when screen small i want 2 card only so increase the flex basis so 2img only show */
+@media screen and (max-width:600px) {
+    .coursecard {
+        flex-basis: 40%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .card {
+        flex-basis: 40%;
+    }
+}
+
+/* on small screen i dont want categoreis */
+@media screen and (max-width:600px)  {
+    .categories {
+        display: none;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .saleimg__offer {
+        bottom: 10px;
+        margin-left: 0px;
+        padding: 3px;
+    }
+}
+
+/* on small scree in want offer card on top */
+@media screen and (max-width:600px) {
+    .saleimg__offer {
+        bottom: 10px;
+        margin-left: 0px;
+        padding: 3px;
+    }
+}
+@media screen and (max-width:600px) {
+.navbar__center,.navbar__right{display: none;}}
+
+@media screen and (max-width:600px) {
+.homeicon{display: block;}}
+
+@media screen and (min-width:601px) {.navbar__center{padding: 8px;}}
+@media screen and (max-width:650px) {.navbar__center input{font-size: 13px;}}
+
+
